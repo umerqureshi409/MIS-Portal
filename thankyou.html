@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS|FUMB Thank You</title>
+    <link rel="icon" type="image/x-icon" href="muet.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #f5f5f5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar h1 {
+            font-size: 1.5rem;
+            color: #004080;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar-links a {
+            color: #004080;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #0073e6;
+        }
+
+        .navbar-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .thank-you-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #004080;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #004080;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0073e6;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #f5f5f5;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1><a href="index.php">
+                <img src="muet.png" alt="Mehran University Logo" />
+            </a> MIS - FUMB</h1>
+
+    </div>
+
+    <div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully. We will get back to you soon.</p>
+        <a href="index.php" class="back-button">Back to Home Page</a>
+    </div>
+    <script>
+        function toggleNavbar() {
+            document.querySelector('.navbar-links').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
